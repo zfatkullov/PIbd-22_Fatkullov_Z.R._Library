@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1060" height="930" viewBox="0 0 1060 930">
+<rect width="1060" height="930" fill="white"/>
+<g font-family="Arial, sans-serif" fill="#17212b">
+<text x="30" y="28" font-size="20" font-weight="bold">Вариант 11. Учет выдачи книг и журналов</text>
+<g fill="none" stroke="#465566" stroke-width="2">
+<path d="M180 230 V370 H380"/>
+<path d="M880 230 V370 H680"/>
+<path d="M530 500 V555"/>
+<path d="M330 650 H380"/>
+<path d="M680 650 H730"/>
+</g>
+<g font-size="15">
+<text x="188" y="253">1</text><text x="345" y="360">0..*</text>
+<text x="888" y="253">1</text><text x="686" y="360">0..*</text>
+<text x="540" y="518">1</text><text x="540" y="548">1..*</text>
+<text x="335" y="640">1</text><text x="350" y="680">0..*</text>
+<text x="687" y="640">1</text><text x="690" y="680">0..1</text>
+</g>
+<rect x="30" y="50" width="300" height="180" rx="3" fill="#f8fafc" stroke="#465566"/>
+<path d="M30 88 H330" stroke="#465566"/>
+<text x="44" y="76" font-size="18" font-weight="bold">Reader</text>
+<text x="44" y="114" font-size="15">PK Id : Guid</text>
+<text x="44" y="141" font-size="15">FullName : string</text>
+<text x="44" y="168" font-size="15">UK CardNumber : string</text>
+<text x="44" y="195" font-size="15">CardExpiresOn : DateTime</text>
+<rect x="730" y="50" width="300" height="180" rx="3" fill="#f8fafc" stroke="#465566"/>
+<path d="M730 88 H1030" stroke="#465566"/>
+<text x="744" y="76" font-size="18" font-weight="bold">Librarian</text>
+<text x="744" y="114" font-size="15">PK Id : Guid</text>
+<text x="744" y="141" font-size="15">FullName : string</text>
+<text x="744" y="168" font-size="15">AllowedSubjects : Subject [Flags]</text>
+<rect x="380" y="285" width="300" height="215" rx="3" fill="#f8fafc" stroke="#465566"/>
+<path d="M380 323 H680" stroke="#465566"/>
+<text x="394" y="311" font-size="18" font-weight="bold">Loan</text>
+<text x="394" y="349" font-size="15">PK Id : Guid</text>
+<text x="394" y="376" font-size="15">FK ReaderId : Guid</text>
+<text x="394" y="403" font-size="15">FK LibrarianId : Guid</text>
+<text x="394" y="430" font-size="15">IssuedOn : DateTime</text>
+<text x="394" y="457" font-size="15">DueOn : DateTime</text>
+<rect x="30" y="555" width="300" height="180" rx="3" fill="#f8fafc" stroke="#465566"/>
+<path d="M30 593 H330" stroke="#465566"/>
+<text x="44" y="581" font-size="18" font-weight="bold">Publication</text>
+<text x="44" y="619" font-size="15">PK Id : Guid</text>
+<text x="44" y="646" font-size="15">Title : string</text>
+<text x="44" y="673" font-size="15">UK InventoryNumber : string</text>
+<text x="44" y="700" font-size="15">Kind : PublicationKind</text>
+<text x="44" y="727" font-size="15">Subject : Subject</text>
+<rect x="380" y="555" width="300" height="180" rx="3" fill="#f8fafc" stroke="#465566"/>
+<path d="M380 593 H680" stroke="#465566"/>
+<text x="394" y="581" font-size="18" font-weight="bold">LoanItem</text>
+<text x="394" y="619" font-size="15">PK Id : Guid</text>
+<text x="394" y="646" font-size="15">FK LoanId : Guid</text>
+<text x="394" y="673" font-size="15">FK PublicationId : Guid</text>
+<text x="394" y="700" font-size="15">UK (LoanId, PublicationId)</text>
+<rect x="730" y="555" width="300" height="180" rx="3" fill="#f8fafc" stroke="#465566"/>
+<path d="M730 593 H1030" stroke="#465566"/>
+<text x="744" y="581" font-size="18" font-weight="bold">ReturnRecord</text>
+<text x="744" y="619" font-size="15">PK Id : Guid</text>
+<text x="744" y="646" font-size="15">UK, FK LoanItemId : Guid</text>
+<text x="744" y="673" font-size="15">ReturnedOn : DateTime</text>
+<g font-size="16">
+<text x="30" y="785">Справочники: Reader, Librarian, Publication. Операции: Loan, ReturnRecord.</text>
+<text x="30" y="817">Loan ↔ Publication: многие-ко-многим через LoanItem; один источник — один экземпляр.</text>
+<text x="30" y="849">PublicationKind: Book / Magazine. Subject: Fiction=1, Science=2, History=4, Technology=8.</text>
+<text x="30" y="881">PK — первичный ключ, FK — внешний ключ, UK — уникальность (проектируемая БД).</text>
+<text x="30" y="913">В лабораторной № 1 БД и хранение не реализуются: используются репозитории-заглушки.</text>
+</g></g></svg>

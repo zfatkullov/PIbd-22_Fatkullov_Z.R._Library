@@ -1,0 +1,115 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RootNamespace>LibraryLab</RootNamespace>
+    <AssemblyName>LibraryLab</AssemblyName>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Unity.Container" Version="5.11.11" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Forms\ReaderListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ReaderListForm.Designer.cs">
+      <DependentUpon>ReaderListForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Forms\ReaderListForm.resx">
+      <DependentUpon>ReaderListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Forms\LibrarianListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\LibrarianListForm.Designer.cs">
+      <DependentUpon>LibrarianListForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Forms\LibrarianListForm.resx">
+      <DependentUpon>LibrarianListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Forms\PublicationListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\PublicationListForm.Designer.cs">
+      <DependentUpon>PublicationListForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Forms\PublicationListForm.resx">
+      <DependentUpon>PublicationListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Forms\ReaderEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ReaderEditForm.Designer.cs">
+      <DependentUpon>ReaderEditForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Forms\ReaderEditForm.resx">
+      <DependentUpon>ReaderEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Forms\LibrarianEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\LibrarianEditForm.Designer.cs">
+      <DependentUpon>LibrarianEditForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Forms\LibrarianEditForm.resx">
+      <DependentUpon>LibrarianEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Forms\PublicationEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\PublicationEditForm.Designer.cs">
+      <DependentUpon>PublicationEditForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Forms\PublicationEditForm.resx">
+      <DependentUpon>PublicationEditForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Forms\LibraryMainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\LibraryMainForm.Designer.cs">
+      <DependentUpon>LibraryMainForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Forms\LibraryMainForm.resx">
+      <DependentUpon>LibraryMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Forms\LoanListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\LoanListForm.Designer.cs">
+      <DependentUpon>LoanListForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Forms\LoanListForm.resx">
+      <DependentUpon>LoanListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Forms\ReturnListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ReturnListForm.Designer.cs">
+      <DependentUpon>ReturnListForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Forms\ReturnListForm.resx">
+      <DependentUpon>ReturnListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Forms\LoanCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\LoanCreateForm.Designer.cs">
+      <DependentUpon>LoanCreateForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Forms\LoanCreateForm.resx">
+      <DependentUpon>LoanCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Compile Update="Forms\ReturnCreateForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="Forms\ReturnCreateForm.Designer.cs">
+      <DependentUpon>ReturnCreateForm.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Update="Forms\ReturnCreateForm.resx">
+      <DependentUpon>ReturnCreateForm.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+</Project>
